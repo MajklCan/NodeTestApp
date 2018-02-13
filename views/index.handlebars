@@ -1,0 +1,40 @@
+<div class="container">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Jmeno</th>
+      <th scope="col">Bydliště</th>
+      <th scope="col">Pohlaví</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+        <tr id="{{cust_id}}">
+            <td>{{cust_id}}</td>
+            <td>{{name}}</td>
+            <td>{{city}}</td>
+            <td>
+                {{#if sex}}
+                    Muž
+                {{else}}
+                    Žena
+                {{/if}}
+            </td>
+        </tr> 
+    {{/each}}
+  </tbody>
+</table>
+    
+</div>
+<style>
+    tr:hover{
+        cursor:pointer
+    }
+</style>
+<script>
+    $("tr").on("click", function(){
+        let id = $(this).attr("id");
+        window.location.replace("/user/"+id);
+    })
+</script>

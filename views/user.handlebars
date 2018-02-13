@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="jumbotron" style="border-top-left-radius: 0;border-top-right-radius: 0">
+        <h1 class="center display-4">
+    {{ data.[0].[0].name }}</h1>
+    <p class="text-primary" style="margin-bottom:-30px;margin-top:15px" >{{data.[0].[0].city}}</p>
+    </div>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Datum objednávky</th>
+      <th scope="col">Objednáno</th>
+      <th scope="col">Cena</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data.[1]}}
+    <tr>
+      <th>{{orde_id}}</th>
+      <td>{{orde_date}}</td>
+      <td>{{name}}</td>
+      <td>{{sum_price}} Kč</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+
+
