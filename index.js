@@ -18,10 +18,7 @@ app.use(cors())
     res.send("Success"); 
  }); 
  app.get('/index', function (req, res) {
-    con.query("SELECT * FROM customers",(err,result)=>{
-        res.render('index',{"data": result})
-        //res.json({"data": result});
-    }) 
+     res.send("Success");  
 }); 
 
  app.get('/user/:id', function (req, res) {
