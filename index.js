@@ -15,10 +15,7 @@ app.use(cors())
  app.set('view engine', 'handlebars');
 
  app.get('/', function (req, res) {
-    con.query("SELECT * FROM customers",(err,result)=>{
-        //res.render('index',{"data": result,"login": err})
-        res.json(result);
-    }) 
+    res.send("Success"); 
  }); 
  app.get('/index', function (req, res) {
     con.query("SELECT * FROM customers",(err,result)=>{
